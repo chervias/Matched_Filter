@@ -39,7 +39,7 @@ signal_conv_map = hp.smoothing(signal_map,fwhm = np.radians(fwhm/60.0),pol=False
 
 b_ell = hp.gauss_beam(np.radians(fwhm/60.0),pol=False,lmax=(3*nside-1))
 
-total_map = signal_conv_map #+ noise_map
+total_map = signal_conv_map + noise_map
 
 # Matched filter, I use the noise spectra as the filter
 # these are the normalizations 
