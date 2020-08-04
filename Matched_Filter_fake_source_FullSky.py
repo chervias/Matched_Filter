@@ -23,7 +23,7 @@ ell_arr = np.arange(3*nside)
 Nell = np.exp( -ell_arr/50.0 ) + 1.0
 
 # create a noise realization
-#noise_map = hp.synfast(Nell,nside,pol=False)
+noise_map = hp.synfast(Nell,nside,pol=False)
 
 signal_map = np.zeros(12*nside**2)
 # put a 200 mJy point source in pixel 123456
